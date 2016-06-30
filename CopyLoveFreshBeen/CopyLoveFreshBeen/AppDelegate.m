@@ -7,16 +7,61 @@
 //
 
 #import "AppDelegate.h"
+#import "StartPageViewController.h"
+#import "AdvertViewController.h"
+#import "MainTabBarViewController.h"
+
+static NSString * isFristOpenApp = @"isFristOpenApp";
 
 @interface AppDelegate ()
+
+@property (strong,nonatomic) StartPageViewController * startPageVC;
+@property (strong,nonatomic) AdvertViewController * advertVC;
+@property (strong,nonatomic) MainTabBarViewController * tabbarBV;
 
 @end
 
 @implementation AppDelegate
 
+-(AdvertViewController *)advertVC{
+    
+    if (!_advertVC) {
+        _advertVC = [[AdvertViewController alloc] init];
+    }
+    return _advertVC;
+}
+
+-(StartPageViewController *)startPageVC{
+    
+    if (!_startPageVC) {
+        _startPageVC = [[StartPageViewController alloc] init];
+    }
+    return _startPageVC;
+}
+
+-(MainTabBarViewController *)tabbarBV{
+    
+    if (!_tabbarBV) {
+        _tabbarBV = [[MainTabBarViewController alloc] init];
+    }
+    return _tabbarBV;
+}
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(adSussess:) name:ADImageLoadSecussed object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(spSussess:) name:StartPageSussess object:nil];
+    
+    self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
+    [self.window makeKeyAndVisible];
+    
+    self.window.rootViewController = self.advertVC;
+    
+    
+    
     return YES;
 }
 
@@ -40,6 +85,21 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)adSussess:(NSNotification *)notification{
+    
+    NSString * isFirst = [[NSUserDefaults standardUserDefaults] objectForKey:isFristOpenApp];
+    if (isFirst == nil) {
+        self.window.rootViewController = self.startPageVC;
+    }else{
+        self.window.rootViewController = self.tabbarBV;
+    }
+}
+
+-(void)spSussess:(NSNotification *)notification{
+    
+    self.window.rootViewController = self.tabbarBV;
 }
 
 @end
