@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  CopyLoveFreshBeen
+//
+//  Created by way on 16/6/30.
+//  Copyright © 2016年 way. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+
+#define NavigationH 64
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define ScreenBounds [UIScreen mainScreen].bounds
+
+#define ADImageLoadSecussed @"ADImageLoadSecussed"
+#define StartPageSussess @"StartPageSussess"
+
+// RGB颜色
+#define RGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 随机色
+#define RandomColor RGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#endif /* PrefixHeader_pch */
+
+/* 生成一张透明图片
+ CGRect rect = CGRectMake(0,0, self.view.frame.size.width,self.view.frame.size.height);
+
+UIGraphicsBeginImageContext(rect.size);
+
+CGContextRef context =UIGraphicsGetCurrentContext();
+
+CGContextSetFillColorWithColor(context, [[UIColor clearColor] CGColor]);
+
+CGContextFillRect(context, rect);
+
+UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+
+UIGraphicsEndImageContext();
+ */
+
+
+
+
