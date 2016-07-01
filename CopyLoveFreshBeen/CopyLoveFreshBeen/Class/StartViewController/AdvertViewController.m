@@ -28,13 +28,14 @@
     [self.view addSubview:imageV];
     imageV.image = [UIImage imageNamed:@"GYKpage1"];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:ADImageLoadSecussed object:nil];
     });
+}
+
+-(BOOL)prefersStatusBarHidden{
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:ADImageLoadSecussed object:nil];
-    
-    
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

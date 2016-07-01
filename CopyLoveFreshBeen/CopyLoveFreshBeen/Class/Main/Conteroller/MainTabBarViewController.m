@@ -44,29 +44,26 @@
 
 - (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage andTag:(NSInteger)tag
 {
-    // 设置子控制器的文字(可以设置tabBar和navigationBar的文字)
+//     设置子控制器的文字(可以设置tabBar和navigationBar的文字)
     childVc.title = title;
-    
-//    AnimationTabBarItem * item = [[AnimationTabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:image] selectedImage:[UIImage imageNamed:selectedImage]];
-//    item.ItemAnimation = [[BounceAnimation alloc] init];
-//    childVc.tabBarItem = item;
-    
-    
+//    childVc.tabBarItem.badgeValue
+//
+////    AnimationTabBarItem * item = [[AnimationTabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:image] selectedImage:[UIImage imageNamed:selectedImage]];
+////    item.ItemAnimation = [[BounceAnimation alloc] init];
+////    childVc.tabBarItem = item;
+//    
+//    
     // 设置子控制器的tabBarItem图片
     childVc.tabBarItem.image = [UIImage imageNamed:image];
     // 禁用图片渲染
     childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    childVc.tabBarItem.tag = tag;
+    [childVc.tabBarItem setValue:[NSNumber numberWithInteger:tag] forKey:@"tag"];
     
     // 设置文字的样式
     [childVc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : RGBColor(123, 123, 123)} forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor orangeColor]} forState:UIControlStateSelected];
-    
-    
-    
-    
-    
+
     //    childVc.view.backgroundColor = RandomColor; // 这句代码会自动加载主页，消息，发现，我四个控制器的view，但是view要在我们用的时候去提前加载
     
     // 为子控制器包装导航控制器
@@ -83,29 +80,19 @@
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+
     
-    NSLog(@"%lu",(unsigned long)tabBarController.selectedIndex);
-    
-    NSLog(@"%@",tabBarController.tabBar);
-    
-    NSLog(@"%ld",(long)tabBarController.tabBarItem.tag);
-    
-    NSLog(@"%@",tabBarController.tabBarItem.superclass);
-    
-    
-    for (UIView * child in tabBarController.tabBar.subviews) {
-        Class class = NSClassFromString(@"UITabBarButton");
-        if ([child isKindOfClass:class]) {
-            
-            NSLog(@"%ld",(long)child.tag);
-            
-            CAKeyframeAnimation * bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-            bounceAnimation.values = @[@1.0 ,@1.4, @0.9, @1.15, @0.95, @1.02, @1.0];
-            bounceAnimation.duration = 0.6;
-            bounceAnimation.calculationMode = kCAAnimationCubic;
-            [child.layer addAnimation:bounceAnimation forKey:@"bounceAnimation"];
-        }
-    }
+//    for (UIView * child in tabBarController.tabBar.subviews) {
+//        Class class = NSClassFromString(@"UITabBarButton");
+//        if ([child isKindOfClass:class]) {
+//            
+//            CAKeyframeAnimation * bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+//            bounceAnimation.values = @[@1.0 ,@1.4, @0.9, @1.15, @0.95, @1.02, @1.0];
+//            bounceAnimation.duration = 0.6;
+//            bounceAnimation.calculationMode = kCAAnimationCubic;
+//            [child.layer addAnimation:bounceAnimation forKey:@"bounceAnimation"];
+//        }
+//    }
 }
 
 @end
