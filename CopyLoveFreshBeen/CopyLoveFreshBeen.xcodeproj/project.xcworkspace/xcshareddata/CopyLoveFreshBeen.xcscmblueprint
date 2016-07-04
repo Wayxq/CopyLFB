@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3841446A0BC53111DA4F785096D601A8602620CF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3841446A0BC53111DA4F785096D601A8602620CF" : 0,
+    "32E33A0065225C93F0CCDC3FEE96533705635D76" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "00958254-C6B5-459E-8B63-C28EBFFB25B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3841446A0BC53111DA4F785096D601A8602620CF" : "CopyLoveFreshBeen\/",
+    "32E33A0065225C93F0CCDC3FEE96533705635D76" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CopyLoveFreshBeen",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CopyLoveFreshBeen.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Wayxq\/CopyLFB.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "32E33A0065225C93F0CCDC3FEE96533705635D76"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git\/Wayxq\/CopyLFB.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3841446A0BC53111DA4F785096D601A8602620CF"
+    }
+  ]
+}

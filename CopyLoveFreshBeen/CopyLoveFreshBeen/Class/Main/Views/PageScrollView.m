@@ -11,7 +11,7 @@
 
 @interface PageScrollView()<UIScrollViewDelegate>
 
-@property (strong,nonatomic) NSTimer * timer;
+@property (weak,nonatomic) NSTimer * timer;
 @property (strong,nonatomic) UIScrollView * scrollView;
 @property (strong,nonatomic) UIPageControl * pageControl;
 
@@ -60,13 +60,14 @@
 
 -(void)startTimer{
     
-    self.timer = [NSTimer timerWithTimeInterval:3.0 target:self selector:@selector(timerAction) userInfo:nil repeats:true];
-    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+    _timer = timer;
 }
 
 -(void)stopTimer{
     
-    [self.timer invalidate];
+    [_timer invalidate];
+    _timer = nil;
 }
 
 -(void)timerAction{
@@ -108,7 +109,7 @@
         }
         
         if (index < 0) {
-            index = self.pageControl.numberOfPages - 1;
+            index = _pageControl.numberOfPages - 1;
         }else if (index >= _pageControl.numberOfPages){
             index = 0;
         }
@@ -153,7 +154,7 @@
     CGFloat minDistance = MAXFLOAT;
     for (int i = 0; i < _scrollView.subviews.count; i ++) {
         UIImageView * imageView = _scrollView.subviews[i];
-        CGFloat distance = abs(imageView.x - _scrollView.contentOffset.x);
+        CGFloat distance = fabs(imageView.x - _scrollView.contentOffset.x);
         
         if (distance < minDistance) {
             minDistance = distance;

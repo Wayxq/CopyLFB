@@ -9,6 +9,7 @@
 #import "OneViewController.h"
 #import "HomeModel.h"
 #import "PageScrollView.h"
+#import "Masonry.h"
 
 @interface OneViewController ()
 
@@ -69,12 +70,40 @@
 
 -(void)initScrollView{
     
-    PageScrollView * pageS = [[PageScrollView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenWidth * 0.31)];
+//    PageScrollView * pageS = [[PageScrollView alloc] initWithFrame:CGRectMake(0,64, ScreenWidth, ScreenWidth * 0.31)];
+//    pageS.dataArr = self.scrollDataArr;
+//    [pageS buildPageScrollViewWithModel:self.scrollDataArr andCount:self.scrollDataArr.count];
+//    [self.view addSubview:pageS];
+//    
+//    [pageS returnText:^(NSInteger index) {
+//        NSLog(@"%ld",(long)index);
+//    }];
+    
+    
+    UIView * aview = [[UIView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, 0)];
+    [self.view addSubview:aview];
+    
+    PageScrollView * pageS = [[PageScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(aview.frame), ScreenWidth, ScreenWidth * 0.31)];
     pageS.dataArr = self.scrollDataArr;
     [pageS buildPageScrollViewWithModel:self.scrollDataArr andCount:self.scrollDataArr.count];
     [self.view addSubview:pageS];
     
-//    pageS.backgroundColor = [UIColor redColor];
+    [pageS returnText:^(NSInteger index) {
+        NSLog(@"%ld",(long)index);
+    }];
+    
+    
+    
+    
+//    PageScrollView * pageSs = [[PageScrollView alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, ScreenWidth * 0.31)];
+//    pageSs.dataArr = self.scrollDataArr;
+//    [pageSs buildPageScrollViewWithModel:self.scrollDataArr andCount:self.scrollDataArr.count];
+//    [self.view addSubview:pageSs];
+//    
+//    [pageSs returnText:^(NSInteger index) {
+//        NSLog(@"%ld",(long)index);
+//    }];
+    
     
 }
 
