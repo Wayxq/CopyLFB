@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761235201D2BF16C00A4CA13 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7612351F1D2BF16C00A4CA13 /* SearchView.m */; };
+		761235231D2BF30E00A4CA13 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 761235221D2BF30E00A4CA13 /* SearchViewController.m */; };
+		761235261D2BF32B00A4CA13 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 761235251D2BF32B00A4CA13 /* ScanViewController.m */; };
 		769C352D1D26338F00E86426 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = 769C352C1D26338F00E86426 /* 首页焦点按钮 */; };
 		769C36751D26377F00E86426 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 769C35F01D26377F00E86426 /* Info.plist */; };
 		769C36761D26377F00E86426 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C35F21D26377F00E86426 /* MASCompositeConstraint.m */; };
@@ -118,6 +121,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7612351E1D2BF16C00A4CA13 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		7612351F1D2BF16C00A4CA13 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		761235211D2BF30E00A4CA13 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		761235221D2BF30E00A4CA13 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		761235241D2BF32B00A4CA13 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		761235251D2BF32B00A4CA13 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		769C352C1D26338F00E86426 /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页焦点按钮"; sourceTree = "<group>"; };
 		769C35F01D26377F00E86426 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		769C35F11D26377F00E86426 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -558,6 +567,10 @@
 				769C36BD1D2637C500E86426 /* ZTNavigationController.m */,
 				769C36BE1D2637C500E86426 /* ZTTabBar.h */,
 				769C36BF1D2637C500E86426 /* ZTTabBar.m */,
+				761235211D2BF30E00A4CA13 /* SearchViewController.h */,
+				761235221D2BF30E00A4CA13 /* SearchViewController.m */,
+				761235241D2BF32B00A4CA13 /* ScanViewController.h */,
+				761235251D2BF32B00A4CA13 /* ScanViewController.m */,
 			);
 			path = Conteroller;
 			sourceTree = "<group>";
@@ -574,6 +587,8 @@
 		769C36C11D2637C500E86426 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7612351E1D2BF16C00A4CA13 /* SearchView.h */,
+				7612351F1D2BF16C00A4CA13 /* SearchView.m */,
 				769C36CD1D263F7B00E86426 /* PageScrollView.h */,
 				769C36CE1D263F7B00E86426 /* PageScrollView.m */,
 				76ED95E91D2A315100EF9FE4 /* NavigationTitleView.h */,
@@ -915,9 +930,12 @@
 				769C36811D26377F00E86426 /* MJExtensionConst.m in Sources */,
 				76E5DC381D25009200215DFE /* UIBarButtonItem+Extension.m in Sources */,
 				769C36A71D26377F00E86426 /* SDWebImagePrefetcher.m in Sources */,
+				761235231D2BF30E00A4CA13 /* SearchViewController.m in Sources */,
 				769C36C51D2637C500E86426 /* SpecialViewController.m in Sources */,
+				761235261D2BF32B00A4CA13 /* ScanViewController.m in Sources */,
 				769C36A81D26377F00E86426 /* UIButton+WebCache.m in Sources */,
 				769C36C31D2637C500E86426 /* MainTabBarViewController.m in Sources */,
+				761235201D2BF16C00A4CA13 /* SearchView.m in Sources */,
 				769C36931D26377F00E86426 /* MJRefreshBackGifFooter.m in Sources */,
 				769C368D1D26377F00E86426 /* MJRefreshComponent.m in Sources */,
 				76E5DC011D24C5B300215DFE /* StartPageViewController.m in Sources */,

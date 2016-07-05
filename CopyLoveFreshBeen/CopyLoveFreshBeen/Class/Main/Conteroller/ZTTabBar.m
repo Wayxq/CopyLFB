@@ -66,10 +66,11 @@
     // 2.设置其他tabbarButton的frame
     CGFloat tabBarButtonW = self.width / 5;
     CGFloat tabBarButtonIndex = 0;
-    for (UIView *child in self.subviews) {
+    for (UIButton *child in self.subviews) {
         Class class = NSClassFromString(@"UITabBarButton");
         if ([child isKindOfClass:class]) {
             
+            [child addTarget:self action:@selector(addAnimation:) forControlEvents:UIControlEventTouchUpInside];
             
             // 设置x
             child.x = tabBarButtonIndex * tabBarButtonW;
@@ -82,6 +83,15 @@
             }
         }
     }
+}
+
+-(void)addAnimation:(UIButton *)btn{
+    
+    CAKeyframeAnimation * bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    bounceAnimation.values = @[@1.0 ,@1.4, @0.9, @1.15, @0.95, @1.02, @1.0];
+    bounceAnimation.duration = 0.6;
+    bounceAnimation.calculationMode = kCAAnimationCubic;
+    [btn.layer addAnimation:bounceAnimation forKey:@"bounceAnimation"];
 }
 
 -(void)addAnimationWith:(UIView *)child{

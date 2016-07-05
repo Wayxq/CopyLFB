@@ -14,6 +14,7 @@
 #import "AddressViewController.h"
 #import "ImageTextView.h"
 #import "UIImageView+WebCache.h"
+#import "SearchViewController.h"
 
 @interface OneViewController ()
 
@@ -47,10 +48,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self dealDataSouce];
-    
-    
-    
     [self buildNav];
+    [self buildCollectionView];
 
 }
 
@@ -88,14 +87,16 @@
 //        NSLog(@"%ld",(long)index);
 //    }];
     
+    UIView * headerView = [UIView new];
+    [self.view addSubview:headerView];
     
-    UIView * aview = [[UIView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, 0)];
-    [self.view addSubview:aview];
+    UIView * aview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0)];
+    [headerView addSubview:aview];
     
     PageScrollView * pageS = [[PageScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(aview.frame), ScreenWidth, ScreenWidth * 0.31)];
     pageS.dataArr = self.scrollDataArr;
     [pageS buildPageScrollViewWithModel:self.scrollDataArr andCount:self.scrollDataArr.count];
-    [self.view addSubview:pageS];
+    [headerView addSubview:pageS];
     
     [pageS returnText:^(NSInteger index) {
         NSLog(@"%ld",(long)index);
@@ -108,35 +109,25 @@
         CGFloat x = 10 + (i * w) + 10*i;
 
         ImageTextView * view = [[ImageTextView alloc] init];
-        view.backgroundColor = [UIColor cyanColor];
         
         HomeModel * model = self.fourDataArr[i];
-        
         view.model = model;
-        [self.view addSubview:view];
+        [headerView addSubview:view];
+        view.frame = CGRectMake(10+x, CGRectGetMaxY(pageS.frame)+5, 70, 70);
+        view.tag = i;
         
-        view.frame = CGRectMake(x, 300, 70, 70);
-//        [view mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(@300);
-//            make.left.equalTo(@(x));
-//            make.height.equalTo(@70);
-//            make.width.equalTo(@70);
-//        }];
-    }
+        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hotViewTap:)];
+        [view addGestureRecognizer:tap];
 
+    }
     
-//    UIView * caoniam  = [[UIView alloc] initWithFrame:CGRectMake(10, 500, 60, 60)];
-//    [self.view addSubview:caoniam];
-//    caoniam.backgroundColor = [UIColor cyanColor];
-//    
-//    UIImageView * asdf = [[UIImageView alloc] initWithFrame:CGRectMake(100, 500, 60, 60)];
-//    asdf.contentMode = UIViewContentModeScaleAspectFit;
-//    [self.view addSubview:asdf];
-//    [asdf sd_setImageWithURL:[NSURL URLWithString:@"http://img01.bqstatic.com/upload/activity/activity_v4_20206_1452163603_icon.jpg"] placeholderImage:[UIImage imageNamed:@""]];
-//    
-//    asdf.centerX = caoniam.centerX;
+    headerView.frame = CGRectMake(0, 64, ScreenWidth, pageS.height + 75);
+}
+
+-(void)hotViewTap:(UITapGestureRecognizer *)tap{
     
-    
+    HomeModel * model = self.fourDataArr[tap.view.tag];
+    NSLog(@"%@",model.name);
 }
 
 -(void)buildNav{
@@ -149,6 +140,32 @@
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleViewTap)];
     [self.navigationItem.titleView addGestureRecognizer:tap];
     
+    
+    UIBarButtonItem * left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_black_scancode"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick)];
+    
+    UIBarButtonItem * right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_search"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick)];
+    
+    self.navigationItem.leftBarButtonItem = left;
+    self.navigationItem.rightBarButtonItem = right;
+    
+}
+
+-(void)buildCollectionView{
+    
+    UICollectionViewFlowLayout * flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    
+    
+}
+
+-(void)leftBarButtonItemClick{
+
+    NSLog(@"扫一扫");
+}
+
+-(void)rightBarButtonItemClick{
+    
+    SearchViewController * vc = [[SearchViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)titleViewTap{
