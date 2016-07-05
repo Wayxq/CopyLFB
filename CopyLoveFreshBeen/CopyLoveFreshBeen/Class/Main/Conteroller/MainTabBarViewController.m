@@ -64,12 +64,18 @@
     [childVc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : RGBColor(123, 123, 123)} forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor orangeColor]} forState:UIControlStateSelected];
 
-    //    childVc.view.backgroundColor = RandomColor; // 这句代码会自动加载主页，消息，发现，我四个控制器的view，但是view要在我们用的时候去提前加载
+//        childVc.view.backgroundColor = RandomColor; // 这句代码会自动加载主页，消息，发现，我四个控制器的view，但是view要在我们用的时候去提前加载
     
-    // 为子控制器包装导航控制器
+//     为子控制器包装导航控制器
     ZTNavigationController *navigationVc = [[ZTNavigationController alloc] initWithRootViewController:childVc];
     // 添加子控制器
     [self addChildViewController:navigationVc];
+    
+    //
+//    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:childVc];
+//    [self addChildViewController:nav];
+    
+    
 }
 
 #pragma ZTTabBarDelegate

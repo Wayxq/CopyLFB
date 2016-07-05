@@ -22,8 +22,8 @@
     
     // Normal
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    textAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:16];
     [item setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     
     // 不可用状态
@@ -31,11 +31,16 @@
     disableTextAttrs[NSForegroundColorAttributeName] = RGBColor(123, 123, 123);
     disableTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:13];
     [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
+    
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationBar.barTintColor = [UIColor colorWithRed:235/255.0 green:212/255.0 blue:49/255.0 alpha:1];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 /**
@@ -43,31 +48,31 @@
  *
  *  @param viewController 即将push进来的控制器
  */
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    if (self.viewControllers.count > 0) { // 此时push进来的viewController是第二个子控制器
-        // 自动隐藏tabbar
-        viewController.hidesBottomBarWhenPushed = YES;
-        
-        // 定义leftBarButtonItem
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTargat:self action:@selector(back) image:@"navigationbar_back" highImage:@"navigationbar_back_highlighted"];
-        
-        // 定义rightBarButtonItem
-        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTargat:self action:@selector(more) image:@"navigationbar_more" highImage:@"navigationbar_more_highlighted"];
-    }
-    // 调用父类pushViewController，self.viewControllers数组添加对象viewController
-    [super pushViewController:viewController animated:animated];
-}
-
-- (void)back
-{
-    // 这里要用self，不能用self.navigationViewController，因为self本身就是导航控制器对象，self.navigationViewController是nil
-    [self popViewControllerAnimated:YES];
-}
-
-- (void)more
-{
-    [self popToRootViewControllerAnimated:YES];
-}
+//- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+//{
+//    if (self.viewControllers.count > 0) { // 此时push进来的viewController是第二个子控制器
+//        // 自动隐藏tabbar
+//        viewController.hidesBottomBarWhenPushed = YES;
+//        
+//        // 定义leftBarButtonItem
+//        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTargat:self action:@selector(back) image:@"navigationbar_back" highImage:@"navigationbar_back_highlighted"];
+//        
+//        // 定义rightBarButtonItem
+//        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTargat:self action:@selector(more) image:@"navigationbar_more" highImage:@"navigationbar_more_highlighted"];
+//    }
+//    // 调用父类pushViewController，self.viewControllers数组添加对象viewController
+//    [super pushViewController:viewController animated:animated];
+//}
+//
+//- (void)back
+//{
+//    // 这里要用self，不能用self.navigationViewController，因为self本身就是导航控制器对象，self.navigationViewController是nil
+//    [self popViewControllerAnimated:YES];
+//}
+//
+//- (void)more
+//{
+//    [self popToRootViewControllerAnimated:YES];
+//}
 
 @end

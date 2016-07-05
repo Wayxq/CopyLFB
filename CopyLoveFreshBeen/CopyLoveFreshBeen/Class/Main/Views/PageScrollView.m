@@ -117,7 +117,7 @@
         imageView.tag = index;
         
         HomeModel * model = self.dataArr[index];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:[UIImage imageNamed:@""]];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:[UIImage imageNamed:@"v2_home_cycle_dot_selected"]];
         
     }
     

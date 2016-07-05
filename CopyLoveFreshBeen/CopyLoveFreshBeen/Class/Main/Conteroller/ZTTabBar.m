@@ -69,6 +69,8 @@
     for (UIView *child in self.subviews) {
         Class class = NSClassFromString(@"UITabBarButton");
         if ([child isKindOfClass:class]) {
+            
+            
             // 设置x
             child.x = tabBarButtonIndex * tabBarButtonW;
             // 设置宽度
@@ -80,6 +82,15 @@
             }
         }
     }
+}
+
+-(void)addAnimationWith:(UIView *)child{
+    
+        CAKeyframeAnimation * bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+        bounceAnimation.values = @[@1.0 ,@1.4, @0.9, @1.15, @0.95, @1.02, @1.0];
+        bounceAnimation.duration = 0.6;
+        bounceAnimation.calculationMode = kCAAnimationCubic;
+        [child.layer addAnimation:bounceAnimation forKey:@"bounceAnimation"];
 }
 
 @end

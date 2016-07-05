@@ -76,6 +76,8 @@
 		769C36C91D2637C500E86426 /* ZTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36BF1D2637C500E86426 /* ZTTabBar.m */; };
 		769C36CC1D2637DF00E86426 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36CB1D2637DF00E86426 /* HomeModel.m */; };
 		769C36CF1D263F7B00E86426 /* PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36CE1D263F7B00E86426 /* PageScrollView.m */; };
+		76E0D0361D2B794300BECA89 /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D0351D2B794300BECA89 /* AddressViewController.m */; };
+		76E0D0391D2B879200BECA89 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D0381D2B879200BECA89 /* ImageTextView.m */; };
 		76E5DC011D24C5B300215DFE /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E5DC001D24C5B300215DFE /* StartPageViewController.m */; };
 		76E5DC061D24C99E00215DFE /* GYKpage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E5DC031D24C99E00215DFE /* GYKpage1.png */; };
 		76E5DC071D24C99E00215DFE /* GYKpage1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76E5DC041D24C99E00215DFE /* GYKpage1@2x.jpg */; };
@@ -88,6 +90,7 @@
 		76E5DC381D25009200215DFE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E5DC351D25009200215DFE /* UIBarButtonItem+Extension.m */; };
 		76E5DC391D25009200215DFE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E5DC371D25009200215DFE /* UIView+Extension.m */; };
 		76E5DC3B1D25047200215DFE /* stone1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E5DC3A1D25047200215DFE /* stone1@3x.png */; };
+		76ED95EB1D2A315100EF9FE4 /* NavigationTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76ED95EA1D2A315100EF9FE4 /* NavigationTitleView.m */; };
 		76EFFC031D2376E9000881FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EFFC021D2376E9000881FA /* main.m */; };
 		76EFFC061D2376E9000881FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EFFC051D2376E9000881FA /* AppDelegate.m */; };
 		76EFFC0E1D2376E9000881FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EFFC0D1D2376E9000881FA /* Assets.xcassets */; };
@@ -260,6 +263,10 @@
 		769C36CB1D2637DF00E86426 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 		769C36CD1D263F7B00E86426 /* PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollView.h; sourceTree = "<group>"; };
 		769C36CE1D263F7B00E86426 /* PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollView.m; sourceTree = "<group>"; };
+		76E0D0341D2B794300BECA89 /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		76E0D0351D2B794300BECA89 /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		76E0D0371D2B879200BECA89 /* ImageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
+		76E0D0381D2B879200BECA89 /* ImageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
 		76E5DBFE1D24C32C00215DFE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		76E5DBFF1D24C5B300215DFE /* StartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPageViewController.h; sourceTree = "<group>"; };
 		76E5DC001D24C5B300215DFE /* StartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPageViewController.m; sourceTree = "<group>"; };
@@ -277,6 +284,8 @@
 		76E5DC361D25009200215DFE /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		76E5DC371D25009200215DFE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		76E5DC3A1D25047200215DFE /* stone1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stone1@3x.png"; sourceTree = "<group>"; };
+		76ED95E91D2A315100EF9FE4 /* NavigationTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationTitleView.h; sourceTree = "<group>"; };
+		76ED95EA1D2A315100EF9FE4 /* NavigationTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationTitleView.m; sourceTree = "<group>"; };
 		76EFFBFE1D2376E9000881FA /* CopyLoveFreshBeen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyLoveFreshBeen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EFFC021D2376E9000881FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76EFFC041D2376E9000881FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -567,8 +576,37 @@
 			children = (
 				769C36CD1D263F7B00E86426 /* PageScrollView.h */,
 				769C36CE1D263F7B00E86426 /* PageScrollView.m */,
+				76ED95E91D2A315100EF9FE4 /* NavigationTitleView.h */,
+				76ED95EA1D2A315100EF9FE4 /* NavigationTitleView.m */,
+				76E0D0371D2B879200BECA89 /* ImageTextView.h */,
+				76E0D0381D2B879200BECA89 /* ImageTextView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		76E0D0311D2B791900BECA89 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				76E0D0321D2B791900BECA89 /* Controller */,
+				76E0D0331D2B791900BECA89 /* View */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		76E0D0321D2B791900BECA89 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				76E0D0341D2B794300BECA89 /* AddressViewController.h */,
+				76E0D0351D2B794300BECA89 /* AddressViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		76E0D0331D2B791900BECA89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		76E5DC021D24C6DB00215DFE /* Images */ = {
@@ -672,6 +710,7 @@
 		76F218021D24B754007B8C80 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				76E0D0311D2B791900BECA89 /* Address */,
 				769C35EE1D26377F00E86426 /* Third */,
 				76E5DC331D25009200215DFE /* Category */,
 				76E5DC091D24CB8500215DFE /* Main */,
@@ -850,6 +889,7 @@
 				769C36C71D2637C500E86426 /* TwoViewController.m in Sources */,
 				76EFFC031D2376E9000881FA /* main.m in Sources */,
 				769C36A91D26377F00E86426 /* UIImage+GIF.m in Sources */,
+				76E0D0361D2B794300BECA89 /* AddressViewController.m in Sources */,
 				769C36961D26377F00E86426 /* MJRefreshGifHeader.m in Sources */,
 				769C367A1D26377F00E86426 /* MASViewAttribute.m in Sources */,
 				769C36791D26377F00E86426 /* MASLayoutConstraint.m in Sources */,
@@ -881,6 +921,7 @@
 				769C36931D26377F00E86426 /* MJRefreshBackGifFooter.m in Sources */,
 				769C368D1D26377F00E86426 /* MJRefreshComponent.m in Sources */,
 				76E5DC011D24C5B300215DFE /* StartPageViewController.m in Sources */,
+				76E0D0391D2B879200BECA89 /* ImageTextView.m in Sources */,
 				769C36AD1D26377F00E86426 /* UIImageView+WebCache.m in Sources */,
 				769C36AB1D26377F00E86426 /* UIImage+WebP.m in Sources */,
 				769C36761D26377F00E86426 /* MASCompositeConstraint.m in Sources */,
@@ -894,6 +935,7 @@
 				769C36CC1D2637DF00E86426 /* HomeModel.m in Sources */,
 				769C36C41D2637C500E86426 /* OneViewController.m in Sources */,
 				769C367E1D26377F00E86426 /* View+MASAdditions.m in Sources */,
+				76ED95EB1D2A315100EF9FE4 /* NavigationTitleView.m in Sources */,
 				769C36871D26377F00E86426 /* NSObject+MJCoding.m in Sources */,
 				769C368F1D26377F00E86426 /* MJRefreshHeader.m in Sources */,
 				769C36951D26377F00E86426 /* MJRefreshBackStateFooter.m in Sources */,
