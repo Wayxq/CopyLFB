@@ -136,6 +136,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7604EA091D2D291300639C94 /* bg1701.developerprofile */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg1701.developerprofile; sourceTree = "<group>"; };
 		7612351E1D2BF16C00A4CA13 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		7612351F1D2BF16C00A4CA13 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		761235211D2BF30E00A4CA13 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -745,6 +746,7 @@
 				76F86CD71D2D10D900E3FBE4 /* Assets.xcassets */,
 				76EFFC0F1D2376E9000881FA /* LaunchScreen.storyboard */,
 				76EFFC121D2376E9000881FA /* Info.plist */,
+				7604EA091D2D291300639C94 /* bg1701.developerprofile */,
 				769C352C1D26338F00E86426 /* 首页焦点按钮 */,
 				76F86CB61D2CD97700E3FBE4 /* 首页新鲜热卖 */,
 				76EFFC011D2376E9000881FA /* Supporting Files */,
