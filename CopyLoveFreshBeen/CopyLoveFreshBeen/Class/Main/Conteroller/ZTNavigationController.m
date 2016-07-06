@@ -53,10 +53,10 @@
 //    if (self.viewControllers.count > 0) { // 此时push进来的viewController是第二个子控制器
 //        // 自动隐藏tabbar
 //        viewController.hidesBottomBarWhenPushed = YES;
-//        
+//
 //        // 定义leftBarButtonItem
 //        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTargat:self action:@selector(back) image:@"navigationbar_back" highImage:@"navigationbar_back_highlighted"];
-//        
+//
 //        // 定义rightBarButtonItem
 //        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTargat:self action:@selector(more) image:@"navigationbar_more" highImage:@"navigationbar_more_highlighted"];
 //    }

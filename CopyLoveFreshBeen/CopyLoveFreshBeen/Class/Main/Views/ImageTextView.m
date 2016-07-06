@@ -49,7 +49,7 @@
     
     self.imageView.frame = self.bounds;
     self.imageView.y = self.imageView.y - 10;
-    self.textLabel.frame = CGRectMake(0, self.imageView.height-15, _imageView.width, 20);
+    self.textLabel.frame = CGRectMake(0, self.imageView.height-20, _imageView.width, 20);
 }
 
 -(void)setModel:(HomeModel *)model{
