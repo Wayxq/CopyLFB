@@ -2,12 +2,12 @@
 //  OneViewController.h
 //  CopyLoveFreshBeen
 //
-//  Created by way on 16/6/30.
+//  Created by way on 16/7/7.
 //  Copyright © 2016年 way. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AnimationViewController.h"
 
-@interface OneViewController : UIViewController
+@interface OneViewController : AnimationViewController
 
 @end

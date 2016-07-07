@@ -123,7 +123,7 @@
 }
 
 -(void)initScrollView{
-
+    
     UIView * headerView = [UIView new];
     self.headerView = headerView;
     headerView.backgroundColor = [UIColor whiteColor];
@@ -140,7 +140,7 @@
         
         CGFloat w = (ScreenWidth - 50)/4;
         CGFloat x = 10 + (i * w) + 10*i;
-
+        
         ImageTextView * view = [[ImageTextView alloc] init];
         
         HomeModel * model = self.fourDataArr[i];
@@ -154,8 +154,7 @@
     }
     
     headerView.frame = CGRectMake(0, -(pageS.height + 75 + 5), ScreenWidth, pageS.height + 75);
-    
-    }
+}
 
 -(void)hotViewTap:(UITapGestureRecognizer *)tap{
     
@@ -202,7 +201,7 @@
 }
 
 -(void)leftBarButtonItemClick{
-
+    
     NSLog(@"扫一扫");
 }
 
@@ -248,6 +247,7 @@
         
         [cell.buyView ClickAddShopCarBlock:^(UIImageView *image) {
             NSLog(@"%@",image);
+            [self addProductAnimation:image];
         }];
         
         return cell;
@@ -274,7 +274,7 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     
-        return UIEdgeInsetsMake(0, 10, 0, 10);
+    return UIEdgeInsetsMake(0, 10, 0, 10);
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
@@ -287,7 +287,7 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-  
+    
     CGSize size;
     
     if (section == 0) {

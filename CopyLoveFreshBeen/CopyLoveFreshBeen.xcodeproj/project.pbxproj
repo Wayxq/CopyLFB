@@ -10,6 +10,9 @@
 		761235201D2BF16C00A4CA13 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7612351F1D2BF16C00A4CA13 /* SearchView.m */; };
 		761235231D2BF30E00A4CA13 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 761235221D2BF30E00A4CA13 /* SearchViewController.m */; };
 		761235261D2BF32B00A4CA13 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 761235251D2BF32B00A4CA13 /* ScanViewController.m */; };
+		763EDC191D2E3DE600628182 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763EDC181D2E3DE600628182 /* AnimationViewController.m */; };
+		763EDC1C1D2E3E4B00628182 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763EDC1B1D2E3E4B00628182 /* OneViewController.m */; };
+		763EDC1F1D2E4E0300628182 /* ShopCarBadgeValueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 763EDC1E1D2E4E0300628182 /* ShopCarBadgeValueManager.m */; };
 		769C352D1D26338F00E86426 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = 769C352C1D26338F00E86426 /* 首页焦点按钮 */; };
 		769C36751D26377F00E86426 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 769C35F01D26377F00E86426 /* Info.plist */; };
 		769C36761D26377F00E86426 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C35F21D26377F00E86426 /* MASCompositeConstraint.m */; };
@@ -71,7 +74,6 @@
 		769C36AE1D26377F00E86426 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36741D26377F00E86426 /* UIView+WebCacheOperation.m */; };
 		769C36C21D2637C500E86426 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36B11D2637C500E86426 /* FourViewController.m */; };
 		769C36C31D2637C500E86426 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36B31D2637C500E86426 /* MainTabBarViewController.m */; };
-		769C36C41D2637C500E86426 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36B51D2637C500E86426 /* OneViewController.m */; };
 		769C36C51D2637C500E86426 /* SpecialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36B71D2637C500E86426 /* SpecialViewController.m */; };
 		769C36C61D2637C500E86426 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36B91D2637C500E86426 /* ThreeViewController.m */; };
 		769C36C71D2637C500E86426 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36BB1D2637C500E86426 /* TwoViewController.m */; };
@@ -143,6 +145,12 @@
 		761235221D2BF30E00A4CA13 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		761235241D2BF32B00A4CA13 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		761235251D2BF32B00A4CA13 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		763EDC171D2E3DE600628182 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		763EDC181D2E3DE600628182 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
+		763EDC1A1D2E3E4B00628182 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		763EDC1B1D2E3E4B00628182 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		763EDC1D1D2E4E0300628182 /* ShopCarBadgeValueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCarBadgeValueManager.h; sourceTree = "<group>"; };
+		763EDC1E1D2E4E0300628182 /* ShopCarBadgeValueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCarBadgeValueManager.m; sourceTree = "<group>"; };
 		769C352C1D26338F00E86426 /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页焦点按钮"; sourceTree = "<group>"; };
 		769C35F01D26377F00E86426 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		769C35F11D26377F00E86426 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -272,8 +280,6 @@
 		769C36B11D2637C500E86426 /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
 		769C36B21D2637C500E86426 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
 		769C36B31D2637C500E86426 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
-		769C36B41D2637C500E86426 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
-		769C36B51D2637C500E86426 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		769C36B61D2637C500E86426 /* SpecialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialViewController.h; sourceTree = "<group>"; };
 		769C36B71D2637C500E86426 /* SpecialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialViewController.m; sourceTree = "<group>"; };
 		769C36B81D2637C500E86426 /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
@@ -597,14 +603,18 @@
 		769C36AF1D2637C500E86426 /* Conteroller */ = {
 			isa = PBXGroup;
 			children = (
+				763EDC171D2E3DE600628182 /* AnimationViewController.h */,
+				763EDC181D2E3DE600628182 /* AnimationViewController.m */,
 				769C36B01D2637C500E86426 /* FourViewController.h */,
 				769C36B11D2637C500E86426 /* FourViewController.m */,
 				769C36B21D2637C500E86426 /* MainTabBarViewController.h */,
 				769C36B31D2637C500E86426 /* MainTabBarViewController.m */,
-				769C36B41D2637C500E86426 /* OneViewController.h */,
-				769C36B51D2637C500E86426 /* OneViewController.m */,
 				769C36B61D2637C500E86426 /* SpecialViewController.h */,
 				769C36B71D2637C500E86426 /* SpecialViewController.m */,
+				763EDC1A1D2E3E4B00628182 /* OneViewController.h */,
+				763EDC1B1D2E3E4B00628182 /* OneViewController.m */,
+				763EDC1D1D2E4E0300628182 /* ShopCarBadgeValueManager.h */,
+				763EDC1E1D2E4E0300628182 /* ShopCarBadgeValueManager.m */,
 				769C36B81D2637C500E86426 /* ThreeViewController.h */,
 				769C36B91D2637C500E86426 /* ThreeViewController.m */,
 				769C36BA1D2637C500E86426 /* TwoViewController.h */,
@@ -976,6 +986,8 @@
 				76E5DC391D25009200215DFE /* UIView+Extension.m in Sources */,
 				769C36C81D2637C500E86426 /* ZTNavigationController.m in Sources */,
 				76F86CB21D2CACFB00E3FBE4 /* PriceView.m in Sources */,
+				763EDC1C1D2E3E4B00628182 /* OneViewController.m in Sources */,
+				763EDC1F1D2E4E0300628182 /* ShopCarBadgeValueManager.m in Sources */,
 				76EFFC061D2376E9000881FA /* AppDelegate.m in Sources */,
 				769C368A1D26377F00E86426 /* NSString+MJExtension.m in Sources */,
 				769C36A41D26377F00E86426 /* SDWebImageDownloader.m in Sources */,
@@ -994,6 +1006,7 @@
 				769C36961D26377F00E86426 /* MJRefreshGifHeader.m in Sources */,
 				769C367A1D26377F00E86426 /* MASViewAttribute.m in Sources */,
 				769C36791D26377F00E86426 /* MASLayoutConstraint.m in Sources */,
+				763EDC191D2E3DE600628182 /* AnimationViewController.m in Sources */,
 				76F86CCF1D2CF34C00E3FBE4 /* NSDate+Addition.m in Sources */,
 				76F86CD31D2CF34C00E3FBE4 /* UIColor+HexCode.m in Sources */,
 				76F86CB51D2CB34E00E3FBE4 /* GoodsModel.m in Sources */,
@@ -1048,7 +1061,6 @@
 				769C36CC1D2637DF00E86426 /* HomeModel.m in Sources */,
 				76F86CD21D2CF34C00E3FBE4 /* NSURLRequest+replayRequest.m in Sources */,
 				76F86CAF1D2CAC4D00E3FBE4 /* BuyView.m in Sources */,
-				769C36C41D2637C500E86426 /* OneViewController.m in Sources */,
 				76F86CBA1D2CE93600E3FBE4 /* HeaderCollectionReusableView.m in Sources */,
 				769C367E1D26377F00E86426 /* View+MASAdditions.m in Sources */,
 				76ED95EB1D2A315100EF9FE4 /* NavigationTitleView.m in Sources */,
