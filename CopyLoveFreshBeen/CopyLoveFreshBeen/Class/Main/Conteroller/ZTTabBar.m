@@ -7,10 +7,12 @@
 //
 
 #import "ZTTabBar.h"
+#import "TabbarBadgeView.h"
 
 @interface ZTTabBar ()
 
 @property (nonatomic, weak) UIButton *plusBtn;
+@property (nonatomic, strong) TabbarBadgeView * redView;
 
 @end
 
@@ -30,6 +32,11 @@
         [plusBtn addTarget:self action:@selector(plusBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:plusBtn];
         self.plusBtn = plusBtn;
+        
+        TabbarBadgeView * redView = [TabbarBadgeView sharedManager];
+        redView.frame = CGRectMake(0, 0, 15, 15);
+        [self addSubview:redView];
+        self.redView = redView;
     }
     return self;
 }
@@ -62,6 +69,10 @@
     // 1.设置加号按钮的位置
     self.plusBtn.centerX = self.width*0.5;
     self.plusBtn.centerY = self.height*0.5;
+    
+    self.redView.centerX = self.width*0.75;
+//    self.redView.centerY = 0;
+
     
     // 2.设置其他tabbarButton的frame
     CGFloat tabBarButtonW = self.width / 5;

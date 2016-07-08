@@ -78,6 +78,7 @@
     [self buildCollectionView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goodsInventoryProblem:) name:@"HomeGoodsInventoryProblem" object:nil];
+    
 }
 
 -(void)dealDataSouce{
@@ -121,6 +122,7 @@
     
     NSLog(@"%@ 库存不足啦~",noti.object);
 }
+
 
 -(void)initScrollView{
     

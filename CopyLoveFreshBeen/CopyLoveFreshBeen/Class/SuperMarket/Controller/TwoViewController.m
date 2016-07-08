@@ -1,22 +1,22 @@
 //
-//  FourViewController.m
+//  TwoViewController.m
 //  CopyLoveFreshBeen
 //
 //  Created by way on 16/6/30.
 //  Copyright © 2016年 way. All rights reserved.
 //
 
-#import "FourViewController.h"
+#import "TwoViewController.h"
 
-@interface FourViewController ()
+@interface TwoViewController ()
 
 @end
 
-@implementation FourViewController
+@implementation TwoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

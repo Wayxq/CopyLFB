@@ -16,7 +16,9 @@
 #import "ZTTabBar.h"
 
 @interface MainTabBarViewController ()<ZTTabBarDelegate,UITabBarControllerDelegate>
-
+{
+    UIViewController * three;
+}
 @end
 
 @implementation MainTabBarViewController
@@ -35,7 +37,26 @@
     [self setValue:tabBar forKey:@"tabBar"];
     
     self.delegate = self;
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ShopCarRedHot:) name:@"ShopCarRedHot" object:nil];
 }
+//
+//-(void)setBadgeNumber{
+//    
+//    for (UINavigationController * obj in self.viewControllers) {
+//        for (UIViewController * vc in obj.viewControllers) {
+//            if ([vc isKindOfClass:[ThreeViewController class]]) {
+//                three = vc;
+//            }
+//        }
+//    }
+//    
+//    three.tabBarItem.badgeValue = @"3";
+//}
+//
+//-(void)ShopCarRedHot:(NSNotification *)noti{
+//    three.tabBarItem.badgeValue = @"7";
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -75,7 +96,7 @@
 //    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:childVc];
 //    [self addChildViewController:nav];
     
-    
+//    [self setBadgeNumber];
 }
 
 #pragma ZTTabBarDelegate

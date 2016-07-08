@@ -7,6 +7,7 @@
 //
 
 #import "BuyView.h"
+#import "TabbarBadgeView.h"
 
 @interface BuyView ()
 
@@ -15,6 +16,8 @@
 @property (strong,nonatomic) UILabel * numLabel;
 @property (strong,nonatomic) UILabel * supplementLabel;
 @property (assign,nonatomic) NSInteger buyNumber;
+
+@property (strong,nonatomic) TabbarBadgeView * manager;
 
 @end
 
@@ -73,6 +76,23 @@
 -(void)setModel:(GoodsModel *)model{
     _model = model;
     
+    if (self.model.userBuyNumber != 0) {
+        self.reduceBtn.hidden = false;
+        self.numLabel.text = [NSString stringWithFormat:@"%ld",(long)self.model.userBuyNumber];
+        self.numLabel.hidden = false;
+    }else{
+        self.reduceBtn.hidden = true;
+        self.numLabel.text = @"";
+        self.numLabel.hidden = true;
+    }
+    
+    if (model.number <= 0) {
+        self.supplementLabel.hidden = false;
+        self.addBtn.hidden = true;
+    }else{
+        self.supplementLabel.hidden = true;
+        self.addBtn.hidden = false;
+    }
 }
 
 -(void)addBtnClick:(UIButton *)btn{
@@ -92,6 +112,12 @@
         [self.delegate addBtnClickWithGoodsName:@""];
     }
     
+    self.manager = [TabbarBadgeView sharedManager];
+//    manager.badgeStr = @"16";
+    [_manager addProductIntoShopCar:self.model];
+    
+    // 在MainTabBarViewController找出three 通知改变badge
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"ShopCarRedHot" object:nil];
 }
 
 -(void)reduceBtnClick:(UIButton *)btn{
@@ -108,6 +134,8 @@
         _numLabel.hidden = true;
         _numLabel.text = @"";
     }
+    
+    [_manager reduceProductIntoShopCar:self.model];
 }
 
 -(void)ClickAddShopCarBlock:(ClickAddShopCarBlock)block{
