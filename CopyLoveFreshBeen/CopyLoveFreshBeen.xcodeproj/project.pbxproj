@@ -13,7 +13,6 @@
 		763EDC191D2E3DE600628182 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763EDC181D2E3DE600628182 /* AnimationViewController.m */; };
 		763EDC1C1D2E3E4B00628182 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763EDC1B1D2E3E4B00628182 /* OneViewController.m */; };
 		7691FB611D2F4BA400F54D10 /* TabbarBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691FB601D2F4BA400F54D10 /* TabbarBadgeView.m */; };
-		7691FB701D2F979A00F54D10 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691FB6F1D2F979A00F54D10 /* TwoViewController.m */; };
 		7691FB731D2F97AF00F54D10 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691FB721D2F97AF00F54D10 /* FourViewController.m */; };
 		7691FB761D2F97BE00F54D10 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7691FB751D2F97BE00F54D10 /* ThreeViewController.m */; };
 		769C352D1D26338F00E86426 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = 769C352C1D26338F00E86426 /* 首页焦点按钮 */; };
@@ -81,6 +80,12 @@
 		769C36C91D2637C500E86426 /* ZTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36BF1D2637C500E86426 /* ZTTabBar.m */; };
 		769C36CC1D2637DF00E86426 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36CB1D2637DF00E86426 /* HomeModel.m */; };
 		769C36CF1D263F7B00E86426 /* PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36CE1D263F7B00E86426 /* PageScrollView.m */; };
+		76B0B6051D3332CF0084E52F /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 76B0B6041D3332CF0084E52F /* supermarket */; };
+		76B0B6081D3333570084E52F /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0B6071D3333570084E52F /* TwoViewController.m */; };
+		76B0B60B1D333D110084E52F /* CategoryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0B60A1D333D110084E52F /* CategoryTableView.m */; };
+		76B0B60E1D33405C0084E52F /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0B60D1D33405C0084E52F /* CategoryTableViewCell.m */; };
+		76B0B6101D334CBE0084E52F /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0B60F1D334CBE0084E52F /* Reveal.framework */; };
+		76B0B6121D334CF80084E52F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0B6111D334CF80084E52F /* libz.tbd */; };
 		76E0D0361D2B794300BECA89 /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D0351D2B794300BECA89 /* AddressViewController.m */; };
 		76E0D0391D2B879200BECA89 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E0D0381D2B879200BECA89 /* ImageTextView.m */; };
 		76E5DC011D24C5B300215DFE /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E5DC001D24C5B300215DFE /* StartPageViewController.m */; };
@@ -151,8 +156,6 @@
 		763EDC1B1D2E3E4B00628182 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		7691FB5F1D2F4BA400F54D10 /* TabbarBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarBadgeView.h; sourceTree = "<group>"; };
 		7691FB601D2F4BA400F54D10 /* TabbarBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarBadgeView.m; sourceTree = "<group>"; };
-		7691FB6E1D2F979A00F54D10 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
-		7691FB6F1D2F979A00F54D10 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 		7691FB711D2F97AF00F54D10 /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
 		7691FB721D2F97AF00F54D10 /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
 		7691FB741D2F97BE00F54D10 /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
@@ -294,6 +297,15 @@
 		769C36CB1D2637DF00E86426 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 		769C36CD1D263F7B00E86426 /* PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollView.h; sourceTree = "<group>"; };
 		769C36CE1D263F7B00E86426 /* PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollView.m; sourceTree = "<group>"; };
+		76B0B6041D3332CF0084E52F /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = supermarket; sourceTree = "<group>"; };
+		76B0B6061D3333570084E52F /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		76B0B6071D3333570084E52F /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		76B0B6091D333D110084E52F /* CategoryTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableView.h; sourceTree = "<group>"; };
+		76B0B60A1D333D110084E52F /* CategoryTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableView.m; sourceTree = "<group>"; };
+		76B0B60C1D33405C0084E52F /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewCell.h; sourceTree = "<group>"; };
+		76B0B60D1D33405C0084E52F /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewCell.m; sourceTree = "<group>"; };
+		76B0B60F1D334CBE0084E52F /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		76B0B6111D334CF80084E52F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		76E0D0341D2B794300BECA89 /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
 		76E0D0351D2B794300BECA89 /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
 		76E0D0371D2B879200BECA89 /* ImageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
@@ -368,6 +380,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B0B6121D334CF80084E52F /* libz.tbd in Frameworks */,
+				76B0B6101D334CBE0084E52F /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,8 +481,8 @@
 		7691FB6B1D2F969C00F54D10 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7691FB6E1D2F979A00F54D10 /* TwoViewController.h */,
-				7691FB6F1D2F979A00F54D10 /* TwoViewController.m */,
+				76B0B6061D3333570084E52F /* TwoViewController.h */,
+				76B0B6071D3333570084E52F /* TwoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -483,6 +497,10 @@
 		7691FB6D1D2F969C00F54D10 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				76B0B6091D333D110084E52F /* CategoryTableView.h */,
+				76B0B60A1D333D110084E52F /* CategoryTableView.m */,
+				76B0B60C1D33405C0084E52F /* CategoryTableViewCell.h */,
+				76B0B60D1D33405C0084E52F /* CategoryTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -852,6 +870,7 @@
 				7604EA091D2D291300639C94 /* bg1701.developerprofile */,
 				769C352C1D26338F00E86426 /* 首页焦点按钮 */,
 				76F86CB61D2CD97700E3FBE4 /* 首页新鲜热卖 */,
+				76B0B6041D3332CF0084E52F /* supermarket */,
 				76EFFC011D2376E9000881FA /* Supporting Files */,
 			);
 			path = CopyLoveFreshBeen;
@@ -860,7 +879,9 @@
 		76EFFC011D2376E9000881FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				76B0B60F1D334CBE0084E52F /* Reveal.framework */,
 				76EFFC021D2376E9000881FA /* main.m */,
+				76B0B6111D334CF80084E52F /* libz.tbd */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1054,6 +1075,7 @@
 				76F86CB71D2CD97700E3FBE4 /* 首页新鲜热卖 in Resources */,
 				76E5DC061D24C99E00215DFE /* GYKpage1.png in Resources */,
 				76E5DC151D24DAB700215DFE /* guide_40_2@2x.png in Resources */,
+				76B0B6051D3332CF0084E52F /* supermarket in Resources */,
 				769C36801D26377F00E86426 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1098,7 +1120,7 @@
 				769C36A91D26377F00E86426 /* UIImage+GIF.m in Sources */,
 				76E0D0361D2B794300BECA89 /* AddressViewController.m in Sources */,
 				769C36961D26377F00E86426 /* MJRefreshGifHeader.m in Sources */,
-				7691FB701D2F979A00F54D10 /* TwoViewController.m in Sources */,
+				76B0B60E1D33405C0084E52F /* CategoryTableViewCell.m in Sources */,
 				769C367A1D26377F00E86426 /* MASViewAttribute.m in Sources */,
 				769C36791D26377F00E86426 /* MASLayoutConstraint.m in Sources */,
 				763EDC191D2E3DE600628182 /* AnimationViewController.m in Sources */,
@@ -1143,12 +1165,14 @@
 				769C36AB1D26377F00E86426 /* UIImage+WebP.m in Sources */,
 				769C36761D26377F00E86426 /* MASCompositeConstraint.m in Sources */,
 				769C367C1D26377F00E86426 /* NSArray+MASAdditions.m in Sources */,
+				76B0B6081D3333570084E52F /* TwoViewController.m in Sources */,
 				76F86CAC1D2C981D00E3FBE4 /* HomeCollectionViewCell.m in Sources */,
 				76F86CCE1D2CF34C00E3FBE4 /* NSData+Addition.m in Sources */,
 				76F218071D24BB02007B8C80 /* AdvertViewController.m in Sources */,
 				769C36831D26377F00E86426 /* MJProperty.m in Sources */,
 				769C36AE1D26377F00E86426 /* UIView+WebCacheOperation.m in Sources */,
 				76F86CD61D2CF34C00E3FBE4 /* UIView(Transform).m in Sources */,
+				76B0B60B1D333D110084E52F /* CategoryTableView.m in Sources */,
 				769C369D1D26377F00E86426 /* UIScrollView+MJRefresh.m in Sources */,
 				769C369C1D26377F00E86426 /* UIScrollView+MJExtension.m in Sources */,
 				769C369B1D26377F00E86426 /* NSBundle+MJRefresh.m in Sources */,
@@ -1306,9 +1330,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CopyLoveFreshBeen",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CopyLoveFreshBeen/PrefixHeader.pch";
 				INFOPLIST_FILE = CopyLoveFreshBeen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = way.CopyLoveFreshBeen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "09d36d46-a039-4861-9b1f-80ea477cf064";
@@ -1320,9 +1354,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CopyLoveFreshBeen",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CopyLoveFreshBeen/PrefixHeader.pch";
 				INFOPLIST_FILE = CopyLoveFreshBeen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = way.CopyLoveFreshBeen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "09d36d46-a039-4861-9b1f-80ea477cf064";

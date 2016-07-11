@@ -7,6 +7,9 @@
 //
 
 #import "AnimationViewController.h"
+#import "AddressViewController.h"
+#import "SearchViewController.h"
+#import "NavigationTitleView.h"
 
 @interface AnimationViewController ()
 
@@ -18,6 +21,48 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self buildNav];
+    
+}
+
+-(void)buildNav{
+    
+    NavigationTitleView * titleView = [[NavigationTitleView alloc] init];
+    [titleView setTitle:@"人民大会堂"];
+    titleView.frame = CGRectMake(0, 0, titleView.adressWidth, 30);
+    self.navigationItem.titleView = titleView;
+    
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleViewTap)];
+    [self.navigationItem.titleView addGestureRecognizer:tap];
+    
+    UIImage * leftImg = [UIImage imageNamed:@"icon_black_scancode"];
+    UIBarButtonItem * left = [[UIBarButtonItem alloc] initWithImage:[leftImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick)];
+    
+    UIImage * rightImg = [UIImage imageNamed:@"icon_search"];
+    UIBarButtonItem * right = [[UIBarButtonItem alloc] initWithImage:[rightImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick)];
+    
+    self.navigationItem.leftBarButtonItem = left;
+    self.navigationItem.rightBarButtonItem = right;
+}
+
+
+-(void)leftBarButtonItemClick{
+    
+    NSLog(@"扫一扫");
+}
+
+-(void)rightBarButtonItemClick{
+    
+    SearchViewController * vc = [[SearchViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void)titleViewTap{
+    
+    AddressViewController * vc = [[AddressViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)addProductAnimation:(UIImageView *)imageView{

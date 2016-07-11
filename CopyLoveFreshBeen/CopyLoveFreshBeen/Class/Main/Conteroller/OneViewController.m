@@ -10,11 +10,11 @@
 #import "HomeModel.h"
 #import "PageScrollView.h"
 #import "Masonry.h"
-#import "NavigationTitleView.h"
-#import "AddressViewController.h"
+
+
 #import "ImageTextView.h"
 #import "UIImageView+WebCache.h"
-#import "SearchViewController.h"
+
 #import "HomeCollectionViewCell.h"
 #import "GoodsModel.h"
 #import "HeaderCollectionReusableView.h"
@@ -74,7 +74,7 @@
     
     [self dealDataSouce];
     [self initScrollView];
-    [self buildNav];
+    
     [self buildCollectionView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goodsInventoryProblem:) name:@"HomeGoodsInventoryProblem" object:nil];
@@ -164,25 +164,7 @@
     NSLog(@"%@",model.name);
 }
 
--(void)buildNav{
-    
-    NavigationTitleView * titleView = [[NavigationTitleView alloc] init];
-    [titleView setTitle:@"人民大会堂"];
-    titleView.frame = CGRectMake(0, 0, titleView.adressWidth, 30);
-    self.navigationItem.titleView = titleView;
-    
-    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleViewTap)];
-    [self.navigationItem.titleView addGestureRecognizer:tap];
-    
-    UIImage * leftImg = [UIImage imageNamed:@"icon_black_scancode"];
-    UIBarButtonItem * left = [[UIBarButtonItem alloc] initWithImage:[leftImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick)];
-    
-    UIImage * rightImg = [UIImage imageNamed:@"icon_search"];
-    UIBarButtonItem * right = [[UIBarButtonItem alloc] initWithImage:[rightImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonItemClick)];
-    
-    self.navigationItem.leftBarButtonItem = left;
-    self.navigationItem.rightBarButtonItem = right;
-}
+
 
 -(void)buildCollectionView{
     
@@ -202,22 +184,7 @@
     self.collectionView.contentInset = UIEdgeInsetsMake(CGRectGetHeight(_headerView.frame)+5, 0, 0, 0);
 }
 
--(void)leftBarButtonItemClick{
-    
-    NSLog(@"扫一扫");
-}
 
--(void)rightBarButtonItemClick{
-    
-    SearchViewController * vc = [[SearchViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
--(void)titleViewTap{
-    
-    AddressViewController * vc = [[AddressViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
