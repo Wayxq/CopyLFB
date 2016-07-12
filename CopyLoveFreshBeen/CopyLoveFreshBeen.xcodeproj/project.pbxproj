@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7607F38E1D349AB5005F8842 /* ProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7607F38D1D349AB5005F8842 /* ProductTableViewController.m */; };
+		7607F3911D34C1AA005F8842 /* SuperMarkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7607F3901D34C1AA005F8842 /* SuperMarkModel.m */; };
+		7607F3941D34C9F3005F8842 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7607F3931D34C9F3005F8842 /* ProductTableViewCell.m */; };
 		761235201D2BF16C00A4CA13 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7612351F1D2BF16C00A4CA13 /* SearchView.m */; };
 		761235231D2BF30E00A4CA13 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 761235221D2BF30E00A4CA13 /* SearchViewController.m */; };
 		761235261D2BF32B00A4CA13 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 761235251D2BF32B00A4CA13 /* ScanViewController.m */; };
@@ -82,7 +85,6 @@
 		769C36CF1D263F7B00E86426 /* PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 769C36CE1D263F7B00E86426 /* PageScrollView.m */; };
 		76B0B6051D3332CF0084E52F /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 76B0B6041D3332CF0084E52F /* supermarket */; };
 		76B0B6081D3333570084E52F /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0B6071D3333570084E52F /* TwoViewController.m */; };
-		76B0B60B1D333D110084E52F /* CategoryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0B60A1D333D110084E52F /* CategoryTableView.m */; };
 		76B0B60E1D33405C0084E52F /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0B60D1D33405C0084E52F /* CategoryTableViewCell.m */; };
 		76B0B6101D334CBE0084E52F /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0B60F1D334CBE0084E52F /* Reveal.framework */; };
 		76B0B6121D334CF80084E52F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B0B6111D334CF80084E52F /* libz.tbd */; };
@@ -144,6 +146,12 @@
 
 /* Begin PBXFileReference section */
 		7604EA091D2D291300639C94 /* bg1701.developerprofile */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg1701.developerprofile; sourceTree = "<group>"; };
+		7607F38C1D349AB5005F8842 /* ProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewController.h; sourceTree = "<group>"; };
+		7607F38D1D349AB5005F8842 /* ProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewController.m; sourceTree = "<group>"; };
+		7607F38F1D34C1AA005F8842 /* SuperMarkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperMarkModel.h; sourceTree = "<group>"; };
+		7607F3901D34C1AA005F8842 /* SuperMarkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperMarkModel.m; sourceTree = "<group>"; };
+		7607F3921D34C9F3005F8842 /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
+		7607F3931D34C9F3005F8842 /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
 		7612351E1D2BF16C00A4CA13 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		7612351F1D2BF16C00A4CA13 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		761235211D2BF30E00A4CA13 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -300,8 +308,6 @@
 		76B0B6041D3332CF0084E52F /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = supermarket; sourceTree = "<group>"; };
 		76B0B6061D3333570084E52F /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
 		76B0B6071D3333570084E52F /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
-		76B0B6091D333D110084E52F /* CategoryTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableView.h; sourceTree = "<group>"; };
-		76B0B60A1D333D110084E52F /* CategoryTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableView.m; sourceTree = "<group>"; };
 		76B0B60C1D33405C0084E52F /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewCell.h; sourceTree = "<group>"; };
 		76B0B60D1D33405C0084E52F /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewCell.m; sourceTree = "<group>"; };
 		76B0B60F1D334CBE0084E52F /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
@@ -483,6 +489,8 @@
 			children = (
 				76B0B6061D3333570084E52F /* TwoViewController.h */,
 				76B0B6071D3333570084E52F /* TwoViewController.m */,
+				7607F38C1D349AB5005F8842 /* ProductTableViewController.h */,
+				7607F38D1D349AB5005F8842 /* ProductTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -490,6 +498,8 @@
 		7691FB6C1D2F969C00F54D10 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7607F38F1D34C1AA005F8842 /* SuperMarkModel.h */,
+				7607F3901D34C1AA005F8842 /* SuperMarkModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -497,10 +507,10 @@
 		7691FB6D1D2F969C00F54D10 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				76B0B6091D333D110084E52F /* CategoryTableView.h */,
-				76B0B60A1D333D110084E52F /* CategoryTableView.m */,
 				76B0B60C1D33405C0084E52F /* CategoryTableViewCell.h */,
 				76B0B60D1D33405C0084E52F /* CategoryTableViewCell.m */,
+				7607F3921D34C9F3005F8842 /* ProductTableViewCell.h */,
+				7607F3931D34C9F3005F8842 /* ProductTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1134,6 +1144,7 @@
 				769C36A01D26377F00E86426 /* NSData+ImageContentType.m in Sources */,
 				769C36891D26377F00E86426 /* NSObject+MJProperty.m in Sources */,
 				769C368C1D26377F00E86426 /* MJRefreshBackFooter.m in Sources */,
+				7607F3941D34C9F3005F8842 /* ProductTableViewCell.m in Sources */,
 				769C36CF1D263F7B00E86426 /* PageScrollView.m in Sources */,
 				769C367F1D26377F00E86426 /* ViewController+MASAdditions.m in Sources */,
 				769C369F1D26377F00E86426 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1144,6 +1155,7 @@
 				769C36AC1D26377F00E86426 /* UIImageView+HighlightedWebCache.m in Sources */,
 				76E5DC1D1D24E86F00215DFE /* StartPagrCollectionViewCell.m in Sources */,
 				769C36A61D26377F00E86426 /* SDWebImageManager.m in Sources */,
+				7607F3911D34C1AA005F8842 /* SuperMarkModel.m in Sources */,
 				769C36811D26377F00E86426 /* MJExtensionConst.m in Sources */,
 				76E5DC381D25009200215DFE /* UIBarButtonItem+Extension.m in Sources */,
 				7691FB761D2F97BE00F54D10 /* ThreeViewController.m in Sources */,
@@ -1172,7 +1184,6 @@
 				769C36831D26377F00E86426 /* MJProperty.m in Sources */,
 				769C36AE1D26377F00E86426 /* UIView+WebCacheOperation.m in Sources */,
 				76F86CD61D2CF34C00E3FBE4 /* UIView(Transform).m in Sources */,
-				76B0B60B1D333D110084E52F /* CategoryTableView.m in Sources */,
 				769C369D1D26377F00E86426 /* UIScrollView+MJRefresh.m in Sources */,
 				769C369C1D26377F00E86426 /* UIScrollView+MJExtension.m in Sources */,
 				769C369B1D26377F00E86426 /* NSBundle+MJRefresh.m in Sources */,
@@ -1197,6 +1208,7 @@
 				769C36771D26377F00E86426 /* MASConstraint.m in Sources */,
 				769C368B1D26377F00E86426 /* MJRefreshAutoFooter.m in Sources */,
 				769C36921D26377F00E86426 /* MJRefreshAutoStateFooter.m in Sources */,
+				7607F38E1D349AB5005F8842 /* ProductTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
