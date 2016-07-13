@@ -11,10 +11,16 @@
 #import "MJExtension.h"
 
 @implementation SuperMarkModel
-+ (instancetype)cellModelWithDict:(NSDictionary *)dict
++ (instancetype)cellModelWithDict:(NSMutableArray *)dict
 {
     SuperMarkModel *model = [[self alloc] init];
     [model mj_setKeyValues:dict];
+    
+    model.products = dict;
+    
     return model;
 }
+
+
+
 @end

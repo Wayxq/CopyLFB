@@ -133,4 +133,8 @@
     [self.horizontalTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
 }
 
+-(void)animationWithCellImageView:(UIImageView *)imageView{
+    [self addProductAnimation:imageView];
+}
+
 @end

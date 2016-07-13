@@ -10,6 +10,7 @@
 
 -(void)didEndDisplayingHeaderView:(NSInteger )section;
 -(void)willDisplayHeaderView:(NSInteger )section;
+-(void)animationWithCellImageView:(UIImageView *)imageView;
 @end
 #import <UIKit/UIKit.h>
 

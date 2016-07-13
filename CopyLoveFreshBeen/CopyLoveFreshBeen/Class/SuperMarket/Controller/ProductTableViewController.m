@@ -18,10 +18,18 @@
 @property (strong,nonatomic) NSMutableArray * categoryArr;
 @property(nonatomic, assign)BOOL isScrollUp;
 @property(nonatomic, assign)CGFloat lastOffsetY;
+@property (strong,nonatomic) NSMutableArray * dataModel;
 
 @end
 
 @implementation ProductTableViewController
+
+-(NSMutableArray *)dataModel{
+    if (!_dataModel) {
+        _dataModel = [NSMutableArray array];
+    }
+    return _dataModel;
+}
 
 -(NSMutableArray *)categoryArr{
     if (!_categoryArr) {
@@ -57,6 +65,27 @@
     
     NSMutableArray * arrr = dict[@"data"][@"categories"];
     self.categoryArr = arrr;
+    
+
+    SuperMarkModel * model = nil;
+    
+    for (int i = 0; i < arrr.count; i ++) {
+        
+        NSDictionary * dic = self.categoryArr[i];
+        NSString * idd = dic[@"id"];
+        NSArray * arr = self.dataSource[idd];
+        
+        NSMutableArray * erzhiheyi = [NSMutableArray array];
+        
+        [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            GoodsModel * model = [GoodsModel cellModelWithDict:obj];
+            [erzhiheyi addObject:model];
+        }];
+        
+        model = [SuperMarkModel cellModelWithDict:erzhiheyi];
+        
+        [self.dataModel addObject:model];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,15 +101,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    NSDictionary * dic = self.categoryArr[section];
-    NSString * idd = dic[@"id"];
-    NSArray * arr = self.dataSource[idd];
-    return arr.count;
+    SuperMarkModel * cateModel = self.dataModel[section];
+    return cateModel.products.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ProductTableViewCell * cell = [ProductTableViewCell cellWithTableView:tableView];
+    
+    [cell.buyView ClickAddShopCarBlock:^(UIImageView *image) {
+        if (self.cDelegate && [self.cDelegate respondsToSelector:@selector(animationWithCellImageView:)]) {
+            [self.cDelegate animationWithCellImageView:image];
+        }
+    }];
+    
+    SuperMarkModel * cateModel = self.dataModel[indexPath.section];
+    GoodsModel * proModel = cateModel.products[indexPath.row];
+    cell.model = proModel;
     
     return cell;
 }
@@ -105,6 +142,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 25;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 85;
 }
 
 //-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -135,9 +176,5 @@
     _lastOffsetY = scrollView.contentOffset.y;
 //    NSLog(@"______lastOffsetY: %f", _lastOffsetY);
 }
-
-
-
-
 
 @end

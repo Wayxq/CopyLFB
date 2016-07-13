@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GoodsModel.h"
 
 @interface SuperMarkModel : NSObject
 
-@property (strong,nonatomic) NSDictionary * products;
-@property (strong,nonatomic) NSArray * categories;
+@property (copy,nonatomic) NSString * idd;
 
-+ (instancetype)cellModelWithDict:(NSDictionary *)dict;
+@property (strong,nonatomic) NSMutableArray * products;
+
++ (instancetype)cellModelWithDict:(NSMutableArray *)dict;
 
 @end
