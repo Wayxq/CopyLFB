@@ -8,7 +8,8 @@
 
 @protocol CategoryTableViewSelectSection <NSObject>
 
--(void)categoryTableViewSelectSection:(NSInteger )section;
+-(void)didEndDisplayingHeaderView:(NSInteger )section;
+-(void)willDisplayHeaderView:(NSInteger )section;
 @end
 #import <UIKit/UIKit.h>
 

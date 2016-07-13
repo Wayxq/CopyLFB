@@ -16,6 +16,8 @@
 
 @property (strong,nonatomic) NSDictionary * dataSource;
 @property (strong,nonatomic) NSMutableArray * categoryArr;
+@property(nonatomic, assign)BOOL isScrollUp;
+@property(nonatomic, assign)CGFloat lastOffsetY;
 
 @end
 
@@ -40,7 +42,8 @@
     
     [self initDatas];
     
-    
+    _isScrollUp = false;
+    _lastOffsetY = 0;
 }
 
 -(void)initDatas{
@@ -113,17 +116,28 @@
 
 -(void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(nonnull UIView *)view forSection:(NSInteger)section{
     
-    if (self.cDelegate && [self.cDelegate respondsToSelector:@selector(categoryTableViewSelectSection:)]) {
-        [self.cDelegate categoryTableViewSelectSection:section+1];
+    if (self.cDelegate && [self.cDelegate respondsToSelector:@selector(didEndDisplayingHeaderView:)] && _isScrollUp && self.tableView.isDragging) {
+        [self.cDelegate didEndDisplayingHeaderView:section];
     }
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayHeaderView:(nonnull UIView *)view forSection:(NSInteger)section{
     
-    if (self.cDelegate && [self.cDelegate respondsToSelector:@selector(categoryTableViewSelectSection:)]) {
-        [self.cDelegate categoryTableViewSelectSection:section];
+    if (self.cDelegate && [self.cDelegate respondsToSelector:@selector(willDisplayHeaderView:)] != _isScrollUp && self.tableView.isDragging) {
+        [self.cDelegate willDisplayHeaderView:section];
     }
-    
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+//    NSLog(@"_lastOffsetY : %f,scrollView.contentOffset.y : %f", _lastOffsetY, scrollView.contentOffset.y);
+    _isScrollUp = _lastOffsetY < scrollView.contentOffset.y;
+    _lastOffsetY = scrollView.contentOffset.y;
+//    NSLog(@"______lastOffsetY: %f", _lastOffsetY);
+}
+
+
+
+
 
 @end

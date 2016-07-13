@@ -10,7 +10,7 @@
 #import "CategoryTableViewCell.h"
 #import "UIColor+HexCode.h"
 #import "ProductTableViewController.h"
-static int number;
+//static int number;
 @interface TwoViewController ()<UITableViewDelegate,UITableViewDataSource,CategoryTableViewSelectSection>
 
 @property (strong,nonatomic) UITableView * horizontalTableView;
@@ -45,8 +45,13 @@ static int number;
     self.verticalTableView.view.frame = CGRectMake(ScreenWidth * 0.25, 64, ScreenWidth - ScreenWidth * 0.25, ScreenHeight);
     [self addChildViewController:self.verticalTableView];
     [self.view addSubview:self.verticalTableView.view];
-    
+
     [self initDatas];
+    
+    if (self.dataSourceArr.count > 0) {
+        [self.horizontalTableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+    }
+
 }
 
 -(void)initDatas{
@@ -70,37 +75,35 @@ static int number;
     CategoryTableViewCell * cell = [CategoryTableViewCell cellWithTableView:tableView];
 
     
-    if (number == 1) {
-        if (indexPath.row == 0) {
-            self.threeBtn = cell.nameLabel;
-        }
-    }
+//    if (number == 1) {
+//        if (indexPath.row == 0) {
+//            self.threeBtn = cell.nameLabel;
+//        }
+//    }
     
     NSDictionary * dic = self.dataSourceArr[indexPath.row];
     
-    cell.block = ^(UIButton * btn){
-        
-        NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:btn.tag];
-        
-        [self.verticalTableView.tableView scrollToRowAtIndexPath:indexpath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-        
-        NSLog(@"%@",btn.titleLabel.text);
-        
-//        if (self.threeBtn) {
-//            self.threeBtn.selected = NO;
-//        }
+//    cell.block = ^(UIButton * btn){
 //        
-//        btn.selected = YES;
+//        NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:btn.tag];
 //        
-//        self.threeBtn = btn;
+//        [self.verticalTableView.tableView scrollToRowAtIndexPath:indexpath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 //        
-//        [self.horizontalTableView reloadData];
-        
-    };
+//        NSLog(@"%@",btn.titleLabel.text);
+//        
+////        if (self.threeBtn) {
+////            self.threeBtn.selected = NO;
+////        }
+////        
+////        btn.selected = YES;
+////        
+////        self.threeBtn = btn;
+////        
+////        [self.horizontalTableView reloadData];
+//        
+//    };
 
     cell.dict = dic;
-    
-    cell.nameLabel.tag = indexPath.row;
     
     return cell;
 }
@@ -109,14 +112,23 @@ static int number;
     return self.dataSourceArr.count;
 }
 
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"1");
+    
+    // product
+    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:0 inSection:indexPath.row];
+    
+    [self.verticalTableView.tableView scrollToRowAtIndexPath:indexpath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    
+    // category
+    [self.horizontalTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
 }
 
--(void)categoryTableViewSelectSection:(NSInteger )section{
-    
+-(void)didEndDisplayingHeaderView:(NSInteger)section{
+    NSIndexPath *indexPath =[NSIndexPath indexPathForRow:section+1 inSection:0];
+    [self.horizontalTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+}
+
+-(void)willDisplayHeaderView:(NSInteger)section{
     NSIndexPath *indexPath =[NSIndexPath indexPathForRow:section inSection:0];
     [self.horizontalTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
 }
